@@ -1,0 +1,34 @@
+{% extends 'adm/base.html' %}
+
+{% block content %}
+    
+    <table class="tbpublicadores" border="1">
+    	<caption>Publicadores</caption>
+   			<tr>
+    			<th>ID</th>
+    			<th>Nome</th>
+    			<th>Data Nascimento</th>
+    			<th>Data Batismo</th>
+    			<th>RG</th>
+    			<th>Email</th>
+    			
+    		</tr> 
+    {% for pub in object_list %}
+        <div class="post">
+            <div class="date">
+            	<tr>
+            		<td>{{ pub.id }}</td>
+            		<td>{{ pub.nome }}</td>
+            		<td>{{ pub.dt_nasc }}</td>
+            		<td>{{ pub.dt_batismo }}</td>
+            		<td>{{ pub.rg }}</td>
+            		<td>{{ pub.email }}</td>
+            	</tr>
+            </div>
+        </div>
+    {% endfor %}
+    </table>
+   
+{% endblock %}
+
+

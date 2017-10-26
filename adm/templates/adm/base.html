@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Ministério</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'adm/ministerio.css' %}" />
+    </head>
+    <body>
+    <header>
+      	<h1><p>Ministério</p></h1>
+    	<nav>
+    		<p>
+    		   <span>| </span><a href="{% url 'publicadores' %}">Publicadores</a>
+    		   <span>| </span><a href="">Grupos</a>
+    		   <span>| </span><a href="">Pioneiros</a>
+    		   <span>| </span><a href="">Campo</a>
+    		</p>
+    	</nav>
+    </header>
+    
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
